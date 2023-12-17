@@ -8,6 +8,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
+app.use(express.json());
+
 app.get('/', (new IndexController).sayHello);
 
 app.listen(port, () => {
